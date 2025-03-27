@@ -13,7 +13,7 @@ const Plugin_Path = join(__dirname, '..').replace(/\\/g, '/')
 const Plugin_Name = basename(Plugin_Path)
 
 let packageJson = {}
-packageJson = Data.readJSON('package.json', `${Plugin_Path}/${Plugin_Name}}`)
+packageJson = Data.readJSON('package.json', Path)
 
 let changelogs = []
 let currentVersion = ''
@@ -34,7 +34,7 @@ const BotName = (() => {
     return 'yunzai'
   } else if (Array.isArray(global.Bot?.uin)) {
     return 'TRSS-Yunzai'
-  } else if (packageJson.dependencies.sequelize) {
+  } else if (packageJson.dependencies?.sequelize) {
     return 'Miao-Yunzai'
   } else {
     throw new Error('还有人玩Yunzai-Bot??')

@@ -230,7 +230,7 @@ const SignUtil = {
     try {
       const { data, headers, success } = isRemote
         ? await this.fetchRemoteData(
-          'https://pan.wuliya.cn/d/Yunzai-Bot/data/signlist.json',
+          'https://pan.wuliya.cn/d/Yunzai-Bot/data/signlist.json?sign=uKIRs8Zseme0kCD5vMkcc7T5f83eIrCGZIKGwESNb3c=:0',
           { withParams: false }
         )
         : { data: this.fetchLocalData('signlist.json'), success: true }
